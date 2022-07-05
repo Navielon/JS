@@ -129,22 +129,30 @@ result = 'I\'m 34 years old';
 result = "I like \"Star Wars\" move"
 
 // Свойства и методы (properties and methods)
-
 result = 'Hello my dear frends'.length;
 result = firstName.length;
 result = greeting.concat(space, 'My name is ', firstName, space, lastName, ' I\'m ', age, space, 'years old')
-result = result.toLocaleUpperCase(); // Верхний регистр
-result = result.toLocaleLowerCase(); // Нижний регистр
+result = result.toUpperCase(); // Верхний регистр
+result = result.toLowerCase(); // Нижний регистр
+
 // Индексы (index)
 // Нумерация начинается с 0
-result = firstName[1]
 
+result = firstName[1] //Обращение к индексу данного значения
 result = 'Hello'.indexOf('l'); // Индекс первого элемента с заданным значением
 result = 'Hello lol'.lastIndexOf('l'); // Индекс последнего элемента с заданным значением
 result = firstName.indexOf('a') // Обращение к индексу фамилии
 result = 'Hello lols'.lastIndexOf('lo'); // Обращение к последнему индексу с заданным значением 
 result = 'Hello lols'.indexOf('lo'); // Обращение к индексу первого элемента с заданным значением
 result = firstName.indexOf('b'); // Обращение к индексу несуществующего символа, результат = -1
-result = firstName.charAt(2);
+result = firstName.charAt(2); // Метод обращения к элементу позиции
+const longString = 'Hi, I\`m long string. Really';
+result = longString.charAt(longString.length -1); // Метод обращения к последнему элементу позиции
 
+// Подстрока (substring())
+result = greeting.substring(0,5) // Диапозон извлечения используя индекс элемента
+
+// Слайс (slice()) похож на предыдущий (substring), можно обращаться со строками как и с массивами
+result = greeting.slice(0,5) // Диапозон извлечения используя индекс элемента
+result = greeting.slice(-6); // Извлекает диапозон начиная с
 console.log(result); // Вывод результата в консоль
