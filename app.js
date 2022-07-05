@@ -113,60 +113,97 @@
 //? Строки
 
 // Контаконация строк
-let result;
-const firstName = 'Jack';
-const lastName = 'Brown';
-const space = ' ';
-const age = 22;
-const greeting = 'Hello there,';
-result = firstName + space + lastName;
-result = greeting + space + 'My name is' + space + firstName + space + lastName + " I`m " + age + ' years old'
-result = firstName.concat(space, lastName, space, age)
-result = greeting.concat(space, 'My name is ', firstName, space, lastName, ' I\'m ', age, space, 'years old')
+// let result;
+// const firstName = 'Jack';
+// const lastName = 'Brown';
+// const space = ' ';
+// const age = 22;
+// const greeting = 'Hello there,';
+// result = firstName + space + lastName;
+// result = greeting + space + 'My name is' + space + firstName + space + lastName + " I`m " + age + ' years old'
+// result = firstName.concat(space, lastName, space, age)
+// result = greeting.concat(space, 'My name is ', firstName, space, lastName, ' I\'m ', age, space, 'years old')
 
 //Экранирование - escaping
-result = 'I\'m 34 years old';
-result = "I like \"Star Wars\" move"
+// result = 'I\'m 34 years old';
+// result = "I like \"Star Wars\" move"
 
 // Свойства и методы (properties and methods)
-result = 'Hello my dear frends'.length;
-result = firstName.length;
-result = greeting.concat(space, 'My name is ', firstName, space, lastName, ' I\'m ', age, space, 'years old')
-result = result.toUpperCase(); // Верхний регистр
-result = result.toLowerCase(); // Нижний регистр
+// result = 'Hello my dear frends'.length;
+// result = firstName.length;
+// result = greeting.concat(space, 'My name is ', firstName, space, lastName, ' I\'m ', age, space, 'years old')
+// result = result.toUpperCase(); // Верхний регистр
+// result = result.toLowerCase(); // Нижний регистр
 
 // Индексы (index)
 // Нумерация начинается с 0
 
-result = firstName[1] //Обращение к индексу данного значения
-result = 'Hello'.indexOf('l'); // Индекс первого элемента с заданным значением
-result = 'Hello lol'.lastIndexOf('l'); // Индекс последнего элемента с заданным значением
-result = firstName.indexOf('a') // Обращение к индексу фамилии
-result = 'Hello lols'.lastIndexOf('lo'); // Обращение к последнему индексу с заданным значением 
-result = 'Hello lols'.indexOf('lo'); // Обращение к индексу первого элемента с заданным значением
-result = firstName.indexOf('b'); // Обращение к индексу несуществующего символа, результат = -1
-result = firstName.charAt(2); // Метод обращения к элементу позиции
-const longString = 'Hi, I\`m long string. Really';
-result = longString.charAt(longString.length -1); // Метод обращения к последнему элементу позиции
+// result = firstName[1] //Обращение к индексу данного значения
+// result = 'Hello'.indexOf('l'); // Индекс первого элемента с заданным значением
+// result = 'Hello lol'.lastIndexOf('l'); // Индекс последнего элемента с заданным значением
+// result = firstName.indexOf('a') // Обращение к индексу фамилии
+// result = 'Hello lols'.lastIndexOf('lo'); // Обращение к последнему индексу с заданным значением 
+// result = 'Hello lols'.indexOf('lo'); // Обращение к индексу первого элемента с заданным значением
+// result = firstName.indexOf('b'); // Обращение к индексу несуществующего символа, результат = -1
+// result = firstName.charAt(2); // Метод обращения к элементу позиции
+// const longString = 'Hi, I\`m long string. Really';
+// result = longString.charAt(longString.length -1); // Метод обращения к последнему элементу позиции
 
 // Подстрока (substring())
-result = greeting.substring(0,5) // Диапозон извлечения используя индекс элемента
+// result = greeting.substring(0,5) // Диапозон извлечения используя индекс элемента
 
 // Слайс (slice()) похож на предыдущий (substring), можно обращаться со строками как и с массивами
-result = greeting.slice(0,5) // Диапозон извлечения используя индекс элемента
-result = greeting.slice(-6); // Извлекает диапозон начиная с последнего элемента
+// result = greeting.slice(0,5) // Диапозон извлечения используя индекс элемента
+// result = greeting.slice(-6); // Извлекает диапозон начиная с последнего элемента
 
 // Сплит (split()) разделяет строку на несколько элементов
-result = longString.split(' '); // Извлекает в виде массива
+// result = longString.split(' '); // Извлекает в виде массива
 // Пример использования
-const colors = 'red,orange,green,blue,white,black';
-result = colors.split(','); // Получаем массив
+// const colors = 'red,orange,green,blue,white,black';
+// result = colors.split(','); // Получаем массив
 
 // Заменить (replace()) заменяет одну строку на другую
-result = colors.replace('blue', 'Кошка'); // Заменяем значение на другое. Первым указывается значение, которое будет меняться, вторым то, на какое оно будет заменено.
+// result = colors.replace('blue', 'Кошка'); // Заменяем значение на другое. Первым указывается значение, которое будет меняться, вторым то, на какое оно будет заменено.
 
 // Включает (includes()) - возвращает true или false
 
-result = colors.includes('blue') // Проверяет на истинну выбранный элемент
-console.log(result); // Вывод результата в консоль
+// result = colors.includes('blue') // Проверяет на истинну выбранный элемент
+// console.log(result); // Вывод результата в консоль
 //!========================================================================================================================================================
+//? Шаблонные строки
+// const brand = 'Audi';
+// const model = 'R8';
+// const color = 'Red';
+// const year = '2021';
+
+// let carHtml;
+
+
+// Старый подход (old approach. Before ES6)
+
+// carHtml = '<h3>' + 'Car Description' + '</h3>' + 
+// '<ul>' + '<li>Brand: ' + brand + '</li>' + 
+// '<li>Model: ' + model + '</li>' + 
+// '<li>Color: ' + color + '</li>' + 
+// '<li>Year: ' + year + '</li>' +
+// '</ul>';
+
+// Новый подход (After ES6) (Шаблонный литералы или шаблонные строки)
+// carHtml = `
+//    <h3>Car Description</h3>
+//    <ul>
+//       <li>Brand: ${brand}</li>
+//       <li>Model: ${model}</li>
+//       <li>Color: ${color}</li>
+//       <li>Year: ${year}</li>
+//       <li>Year: ${2010+12}</li>
+//       <li>Doors: ${getDoorsNumber()}</li>
+//       <li>Tax: ${year < 2000 ? '20%' : '10%'} </li> 
+//    </ul>
+// `
+// Использование тернарного оператора
+// function getDoorsNumber() {
+   // return 4;
+// }
+
+// document.body.innerHTML = carHtml; // Импорт в html
