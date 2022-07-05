@@ -205,5 +205,43 @@
 // function getDoorsNumber() {
    // return 4;
 // }
-
 // document.body.innerHTML = carHtml; // Импорт в html
+//!========================================================================================================================================================
+//? Задание "Анкета"
+
+// Метод prompt
+
+// let favoriteColor;
+// let yourName;
+// let age;
+// let gender;
+// let boysname;
+// let favoriteWork;
+// let teaquestion;
+// let question;
+
+// favoriteColor = prompt('Какой твой любимый цвет? ');
+// yourName = prompt('Как тебя зовут?');
+// age = prompt('Сколько тебе лет?');
+// gender = prompt('Какой у тебя пол? (М/Ж)');
+// boysname = prompt('Как зовут твоего парня?');
+// favoriteWork = prompt('Кем ты мечтаешь работать?');
+// teaquestion = prompt('Ты любишь чай?');
+// question = prompt('Когда? (Пойми сама о чем вопрос)');
+
+// questionnaire = `
+//    <h2>Результат: </h2>
+//    <ul>
+//       <li>Твой любимый цвет: ${favoriteColor}</li>
+//       <li>Тебя зовут: ${yourName}</li>
+//       <li>Твой возраст: ${age}</li>
+//       <li>Твой пол: ${gender}</li>
+//       <li>Твоего парня зовут: ${boysname}</li>
+//       <li>Ты мечтаешь работать: ${favoriteWork} </li> 
+//       <li>Любишь ли ты чай?: ${teaquestion} </li> 
+//       <li>Ого...: ${question} </li> 
+//    </ul>
+// `
+// document.body.innerHTML = questionnaire;
+// console.log('Your favorite color is ' + favoriteColor);
+//!========================================================================================================================================================
