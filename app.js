@@ -245,3 +245,33 @@
 // document.body.innerHTML = questionnaire;
 // console.log('Your favorite color is ' + favoriteColor);
 //!========================================================================================================================================================
+//? Операторы сравнения (Comparison Operators)
+
+// const x = 7;
+// const y = 7;
+// let isXMoreThanY = x > y;
+// let isXMoreThanY = x < y;
+// let isXMoreThanY = x <= y;
+// let isXMoreThanY = x => y;
+// const x = true; // Boolean значения
+// const y = true; // Boolean значения
+// const x = 'text'; // Stroke значения
+// const y = 'text'; // Stroke значения
+// const x = '5'; // Stroke
+// const y = 5; // Number
+// let isXMoreThanY = x == y; // Не строгий оператор равенства
+// const x = '5'; // Stroke
+// const y = 5; // Number
+// let isXMoreThanY = x === y; // Cтрогий оператор равенства
+// const x = '5'; // Stroke
+// const y = '5'; // Number
+// let isXMoreThanY = x !== y; // Оператор неравенства
+// console.log(isXMoreThanY);
+// console.log(true == '1');
+// console.log(false == '0');
+// console.log(null == undefined);
+// console.log(null === undefined);
+// console.log(NaN === NaN);
+// console.log(NaN == NaN);
+//!========================================================================================================================================================
+//? Приоритет операторов
