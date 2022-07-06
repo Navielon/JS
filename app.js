@@ -464,3 +464,39 @@
 // document.body.innerHTML = inform;
 // }
 // Выполнено.
+//!========================================================================================================================================================
+//? Правдивые и ложные значения (Truthy & Falsy values)
+//Falsy или лживые значения, это значения, которые не равны False. Но  они становятся False когда мы пытаемся их сконвертировать в Boolean.
+//Falsy в js всего 5 значений: 0, '', undefined, null, NaN. Они изначально не равные False. Но ставновятся равны false когда конвертируются в boolean
+// console.log(Boolean(0)); // Значение False
+// console.log(Boolean('')); // Значение False
+// console.log(Boolean(undefined)); // Значение False
+// console.log(Boolean(null)); // Значение False
+// console.log(Boolean(NaN)); // Значение False
+// console.log(Boolean(22)); // Значение True
+// console.log(Boolean('22')); // Значение True
+// console.log(Boolean([])); // Значение True
+// console.log(Boolean({})); // Значение True
+// console.log(Boolean(3.5)); // Значение True
+
+// const age = 1;
+
+// if (age) {
+//    console.log('Человек был рожден')
+// }
+// else {
+//    console.log('Человек не был рожден')
+// }
+
+// //*
+
+// let weight;
+
+// weight = 0;
+
+// if (weight) {
+//    console.log('Вес определён');
+// }
+// else {
+//    console.log('Вес не определён');
+// }
