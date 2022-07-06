@@ -735,7 +735,7 @@
 // const number = Number ('25'); // Числовая функция
 // console.log(number); 
 //!========================================================================================================================================================
-//? 35. Функции. Объявления vs выражений (Declarations vs Expressions)
+//? 35. Функции. Деклорации vs Экспрешн (Declarations vs Expressions)
 
 //TODO Функция деклорации
 // function getAge (birthYear, yearNow) {
@@ -760,10 +760,35 @@
 //TODO Функция экспрешн
 
 // const getAge2 = function(birthYear, yearNow) // Присваеваем функцию без имени > переменной. (Функция является анонимной)
-// {}
+// {
    // return yearNow - birthYear;
 // }
 // const myAge2 = getAge2(2003, 2022);
 // console.log(myAge2);
 // Разница между деклорацией и экспрешеном в том, что функцию деклорации можно вызвать до того, как она была определена. (Строкой выше самой функции). А экспрешн нет. 
+//!========================================================================================================================================================
+//? Стрелочные функции (arrow functions)
+
+// const getAge2 = function(birthYear, yearNow) 
+// {
+   // return yearNow - birthYear;
+// }
+// const myAge2 = getAge2(2003, 2022);
+// console.log(myAge2);
+
+// const getAge3 = (birthYear, yearNow) => yearNow - birthYear; // Стрелочная функция
+
+// const myAge3 = getAge3(2003, 2022);
+// console.log(myAge3);
+
+
+// Более сложная стрелочная функция. Похожа на деклорацию.
+// const canBuyAlcohol = (birthYear, yearNow) => {
+//    const age = yearNow - birthYear;
+//    const isPersonOlderThan21 = age >= 21 ? true : false;
+//    return isPersonOlderThan21;
+// }
+// Мы можем опустить return (возврат) только в том случае, если у нас однострочная функция
+
+// console.log(canBuyAlcohol(2000, 2022));
 //!========================================================================================================================================================
