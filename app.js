@@ -639,4 +639,29 @@ if (number > 0) {
    const text = 'The number is positive'; // statement
 }
 //!========================================================================================================================================================
-//?
+//? Тернарный оператор (Statements AndExpressions)
+
+// const money = 100;
+// const cost = 50;
+
+// money >= cost ? console.log('You can buy it.') : console.log('You can not buy it'); // Тернарный оператор. 
+// Имеет три части. Первая - "money >= cost ?" вторая "console.log('You can buy it.') : " третья "console.log('You can not buy it');"
+// Тернарный оператор всегда производит значение. 
+
+// Более правильное выражение:
+// const canYouBuyIt = money >= cost ? 'You can buy it.' : 'You can not buy it'; // Тернарный оператор, который основывается на условиях.
+// console.log(canYouBuyIt)
+
+// If & else отличие от тернарного оператора.
+// Можно использовать тольок let.
+// let canYouBuyIt1;
+// if(money >= cost){
+//    canYouBuyIt1 = 'You can buy it.';
+// }
+// else {
+//    canYouBuyIt1 = 'You can not buy';
+// }
+// console.log(canYouBuyIt1)
+
+// console.log(`You can${money >= cost ? '': ' not '} buy it`); //Тернарный оператор
+//!========================================================================================================================================================
