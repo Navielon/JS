@@ -627,41 +627,41 @@
 //? Заявления и Выражения (Statements & Expressions)
 // Выражения (Expressions) (Если приводить аналог нашего языка, то expressions как слова в предложении)
 
-2 + 2 // expression 
-37 // expression 
-true && false // expression
+// 2 + 2 // expression 
+// 37 // expression 
+// true && false // expression
 
 // Заявления (Statements)  (Если приводить аналог нашего языка, то statements как предложения)
 
-const number = 10; // expression
+// const number = 10; // expression
 
-if (number > 0) {
-   const text = 'The number is positive'; // statement
-}
+// if (number > 0) {
+//    const text = 'The number is positive'; // statement
+// }
 //!========================================================================================================================================================
 //? Тернарный оператор (Statements AndExpressions)
 
-// const money = 100;
-// const cost = 50;
+// const money = 100; // Сумма на счёте
+// const cost = 50; // Цена товара
 
-// money >= cost ? console.log('You can buy it.') : console.log('You can not buy it'); // Тернарный оператор. 
-// Имеет три части. Первая - "money >= cost ?" вторая "console.log('You can buy it.') : " третья "console.log('You can not buy it');"
+// money >= cost ? console.log('Ты можешь купить этот предмет') : console.log('Ты не можешь купить этот предмет'); // Тернарный оператор. 
+// Имеет три части. Первая - "money >= cost ?" вторая "console.log('Ты можешь купить этот предмет') : " третья "console.log('Ты не можешь купить этот предмет');"
 // Тернарный оператор всегда производит значение. 
 
 // Более правильное выражение:
-// const canYouBuyIt = money >= cost ? 'You can buy it.' : 'You can not buy it'; // Тернарный оператор, который основывается на условиях.
+// const canYouBuyIt = money >= cost ? 'Ты можешь купить этот предмет' : 'Ты не можешь купить этот предмет'; // Тернарный оператор, который основывается на условиях.
 // console.log(canYouBuyIt)
 
 // If & else отличие от тернарного оператора.
 // Можно использовать тольок let.
 // let canYouBuyIt1;
 // if(money >= cost){
-//    canYouBuyIt1 = 'You can buy it.';
+//    canYouBuyIt1 = 'Ты можешь купить этот предмет';
 // }
 // else {
-//    canYouBuyIt1 = 'You can not buy';
+//    canYouBuyIt1 = 'Ты не можешь купить этот предмет';
 // }
 // console.log(canYouBuyIt1)
 
-// console.log(`You can${money >= cost ? '': ' not '} buy it`); //Тернарный оператор
+// console.log(`Ты${money >= cost ? '': ' не'} можешь купить этот предмет`); //Тернарный оператор
 //!========================================================================================================================================================
