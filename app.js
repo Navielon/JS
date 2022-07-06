@@ -500,3 +500,67 @@
 // else {
 //    console.log('Вес не определён');
 // }
+//========================================================================================================================================================
+//? Boolean логика (Boolean  logic)
+// Основные операторы Boolean логики: AND, OR, NOT
+
+// AND (&&)
+
+// console.log(true && true); // True (Истина и истина  true and true)
+// console.log(true && false); // False (Истина и ложь, true and false)
+// console.log(false && false); // False (Ложь или ложь, false and false)
+
+// OR (||)
+
+// console.log(true || true); // True (Истина или истина  true or true)
+// console.log(true || false); // True (Истина или ложь, true or false)
+// console.log(false || false); // False (Ложь или ложь, false or false)
+
+// NOT (!)
+
+// console.log(!true); // False (Не истина, not true)
+// console.log(!false); // True (Не ложь, not false)
+
+//* 
+
+// Примеры
+
+// Пример 1. (AND, И, &&) Продажа алкоголя. Для покупки человек должен быть совершеннолетний и иметь деньги
+// const hasMoney = true; // Есть деньги
+// const isAdult = true; // Взрослый
+
+// if (hasMoney && isAdult) {
+//    console.log('Вы можете купить алкогольный напиток');
+// }
+// else {
+//    console.log('Вы не можете купить алкогольный напиток');
+// }
+
+// Пример 2. (OR, ИЛИ, ||) Покупка сладостей с родителями. Для этого нужно иметь деньги самому, или чтобы были взрослые люди с деньгами.
+
+// const hasMoney = true; // Есть деньги
+// const isWidthParent = true; // Взрослые люди с деньгами (родители)
+
+// if (hasMoney || isWidthParent) {
+//    console.log('Вы можете купить эти вкусные вафли');
+// }
+// else {
+//    console.log('Вы не можете купить эти вафли');
+// }
+
+// Пример 3. (NOT, НЕ, !) Продажа алкоголя. Для покупки человек должен быть совершеннолетний и иметь деньги
+
+// const hasMoney = true; // Имеет деньги
+// const isAdult = true; // Взрослый
+// const isCompletelyDrunk = true; // Человек пьяный
+
+// console.log(!hasMoney);
+
+// if (hasMoney && isAdult && !isCompletelyDrunk) {
+//    console.log('Вы можете купить алкогольный напиток');
+// }
+// else {
+//    console.log('Вы не можете купить алкогольный напиток');
+// }
+//!========================================================================================================================================================
+//? Оператор переключения (Switch Statement)
