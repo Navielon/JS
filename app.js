@@ -701,3 +701,38 @@
 // const package = 'My Package'; // Зарезервивано JS
 //!========================================================================================================================================================
 //? Функии (functions)
+// Функция одна из основных концепкий JS. Функция - кусок кода, которую можно использовать неоднократно. 
+// 'use strict';
+// Не повторяй себя (функцию)
+// function printText(){
+//    console.log('Hello to everyone!');
+// }
+
+// printText(); // Вызывает функцию по её названию.
+
+// function colorizer(item, color, colorCode) {
+   // console.log(item, color);
+//    const colorizedItem = `The ${item} is ${color} the color is ${colorCode}.` // Обращаемся к элементам функции узнавая их значения.
+   // console.log(colorizedItem);
+//    return colorizedItem;
+// }
+// colorizer('desk', 'red', '99'); // Устанавливаем значение переменных
+// const messageFromColorizer = colorizer('desk', 'red', '99'); // При вызове функции передаём параметрам нужные значения
+// console.log(`We have the following message: ${messageFromColorizer}`);
+
+// const messageFromColorizer2 = colorizer('hand', 'green', '10');
+// console.log(`We have the following message: ${messageFromColorizer2}`);
+
+
+// function printText(){
+//    console.log('Hello to everyone!');
+// }
+
+// printText(); // Вызывает функцию по её названию.
+// printText();
+// printText();
+
+// Number('25') // Встроенная функция
+const number = Number ('25'); // Числовая функция
+console.log(number); 
+//!========================================================================================================================================================
