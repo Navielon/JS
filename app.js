@@ -853,10 +853,10 @@
 
 // Функция printBonus
 // const printBonus = function (dept1AverQuarter, dept2AverQuarter){ // Создаём функцию, которая обращаемся к средней прибыли первого и второго отдела.
-//    if (dept1AverQuarter > dept2AverQuarter){ // Если средний уровень дохода за продажи первого отдела БОЛЬШЕ, чем доход второго отдела, то :
-//       const diffSumm = dept1AverQuarter - dept2AverQuarter; // Высчитывается разница. Она высчитывается следующим образом: Средняя прибыль первого отдела минус средняя прибыль второго отдела. Разница будет равна результату вычисления.
-//       const percent = diffSumm / dept2AverQuarter * 100; // Высчитывается процент. Разница делится на средний доход второго отдела и умножается на 100 для получения процента.
-//       if (percent >= 30){ // Если итоговый процент дохода больше 30%, то:
+   // if (dept1AverQuarter > dept2AverQuarter){ // Если средний уровень дохода за продажи первого отдела БОЛЬШЕ, чем доход второго отдела, то :
+      // const diffSumm = dept1AverQuarter - dept2AverQuarter; // Высчитывается разница. Она высчитывается следующим образом: Средняя прибыль первого отдела минус средняя прибыль второго отдела. Разница будет равна результату вычисления.
+      // const percent = diffSumm / dept2AverQuarter * 100; // Высчитывается процент. Разница делится на средний доход второго отдела и умножается на 100 для получения процента.
+      // if (percent >= 30){ // Если итоговый процент дохода больше 30%, то:
 //          console.log(`Отдел 1 получит бонус в размере ${percent}% в этом квартале`); // В консоль выведится информация о проценте бонуса, основаного на проценте
 //       } 
 //       else { // Если же сумма ниже 30%
@@ -877,9 +877,9 @@
 //       console.log(`Никаких бонусов в этом квартале для всех отделов`); // В консоль выведится информация о том, что никакой отдел не получит надбавки.
 //    }
 // }
+// const bonus1 = printBonus(dept1AverQuarterFirst, dept2AverQuarterFirst);
+// const bonus2 = printBonus(dept1AverQuarterSecond, dept2AverQuarterSecond);
 // printBonus(dept1AverQuarterFirst, dept2AverQuarterFirst); // Вызов функции с результатом за первый квартал.
-// printBonus(dept1AverQuarterSecond, dept2AverQuarterSecond); // Вызов функции с результатом за второй квартал.
-
 // Свои попытки "потыкать"
 // printBonus(dept1AverSales2, dept2AverSales2);
 
@@ -887,17 +887,30 @@
 // const weeklyProfit2 = [230, 110, 94, 542, 124, 285, 99]; // Прибыль за вторую неделю месяца.
 // const weeklyProfit3 = [317, 572, 439, 371, 764, 432, 876]; // Прибыль за третью неделю месяца.
 // const weeklyProfit4 = [320, 210, 850, 122, 341, 935, 323]; // Прибыль за четвертую неделю месяца.
+// const weeklyProfit5 = [125, 343, 638]; // Прибыль за пятую неделю месяца.
 
 // const summ1 = weeklyProfit1.map(i=>x+=i, x=0).reverse()[0] // Суммарная недельная прибыль за первую неделю месяца.
 // const summ2 = weeklyProfit2.map(i=>x+=i, x=0).reverse()[0] // Суммарная недельная прибыль за вторую неделю месяца.
 // const summ3 = weeklyProfit3.map(i=>x+=i, x=0).reverse()[0] // Суммарная недельная прибыль за третью неделю месяца.
 // const summ4 = weeklyProfit4.map(i=>x+=i, x=0).reverse()[0] // Суммарная недельная прибыль за четвертую неделю месяца.
-// console.log(summ1, summ2, summ3, summ4);
+// const summ5 = weeklyProfit5.map(i=>x+=i, x=0).reverse()[0] // Суммарная недельная прибыль за пятую неделю месяца.
+// console.log(summ1, summ2, summ3, summ4, summ5);
 // const averageWeeklyProfit1 = summ1 / weeklyProfit1.length; // Средняя недельная прибыль за в первую неделю месяца.
-// const averageWeeklyProfit2 = summ2 / weeklyProfit1.length; // Средняя недельная прибыль за во вторую неделю месяца.
-// const averageWeeklyProfit3 = summ3 / weeklyProfit1.length; // Средняя недельная прибыль за в третью неделю месяца.
-// const averageWeeklyProfit4 = summ4 / weeklyProfit1.length; // Средняя недельная прибыль за в четвертую неделю месяца.
+// const averageWeeklyProfit2 = summ2 / weeklyProfit2.length; // Средняя недельная прибыль за во вторую неделю месяца.
+// const averageWeeklyProfit3 = summ3 / weeklyProfit3.length; // Средняя недельная прибыль за в третью неделю месяца.
+// const averageWeeklyProfit4 = summ4 / weeklyProfit4.length; // Средняя недельная прибыль за в четвертую неделю месяца.
+// const averageWeeklyProfit5 = summ5 / weeklyProfit5.length; // Средняя недельная прибыль за в пятую неделю месяца.
 
 // averageMonthlyProfit = averageWeeklyProfit1 + averageWeeklyProfit2 + averageWeeklyProfit3 + averageWeeklyProfit4; // Суммарная средняя месячная прибыль
-// console.log(averageMonthlyProfit);
+// console.log(averageMonthlyProfit)
+// Суммарная месячная прибыль рассчитана неккоректно. Правильным вариантом будет посчитать сумму всей дней в месяце и разделить на количество дней.
+// Попробовать это сделать можно было следующим образом..
+// const summMonth = weeklyProfit1.length + weeklyProfit2.length + weeklyProfit3.length + weeklyProfit4.length + weeklyProfit5.length;
+// const summ = weeklyProfit1.map(i=>x+=i, x=0).reverse()[0] + weeklyProfit2.map(i=>x+=i, x=0).reverse()[0] + weeklyProfit3.map(i=>x+=i, x=0).reverse()[0] + weeklyProfit5.map(i=>x+=i, x=0).reverse()[0] + weeklyProfit1.map(i=>x+=i, x=0).reverse()[0]
+// const monthAverSumm = summ / summMonth;
+// console.log(`Количество дней в месяце = ${summMonth}`);
+// console.log(`Суммарный доход за месяц = ${summ} $`);
+// console.log(`Средний ежедневный доход в течении месяца = ${monthAverSumm} $`);
+
 //!========================================================================================================================================================
+//? Массивы.
