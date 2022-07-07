@@ -792,3 +792,29 @@
 
 // console.log(canBuyAlcohol(2000, 2022));
 //!========================================================================================================================================================
+//? Вызов функции внутри других функций
+
+// function colorMixer(color1, color2){
+   // const newColor = `${color1} + ${color2}`
+   // return newColor;
+// }
+
+// function colorizer(item, color1, color2) {
+   // console.log(item, color);
+   // const color = colorMixer(color1, color2) // Сперва идет вычисление. ('red' + 'orange' или 'white' + 'black') а после оно выносится в результат.
+   // const colorizedItem = `The ${item} is ${color} .` // Обращаемся к элементам функции узнавая их значения. Выводится после вычислений функций
+   // const colorizedItem = `Вопрос. ${item} (сложение) ${color} .` 
+   // console.log(colorizedItem);
+   // return colorizedItem;
+// }
+
+// const colorizedCar = colorizer('car', 'red', 'orange'); // Вызывается функцияя с тремя аргументами (Машина, Красный, Оранжевый). Эти аргументы ЗАМЕНЯЮТ параметры ФУНКЦИИ colorizer.
+// Т.е. item = 'car'; color1 = 'red'; color2 = 'orange';
+// console.log(colorizedCar);
+// Что происходит далее. В функции colorMixer вызывается color1, который на данный момент равен значению константы.
+// Т.е. color1 в функции ColorMixer = 'red'. А color2 в свою очередь равен 'orange'.
+// После этого данные передаём в функцию newColor.
+
+// console.log(colorizer('house', 'white', 'black'));
+// console.log(colorizer('решите пример', '2', '3956'));
+//!========================================================================================================================================================
