@@ -916,4 +916,56 @@
 // console.log(`Средний ежедневный доход в течении месяца = ${monthAverSumm} $`);
 
 //!========================================================================================================================================================
-//? Массивы.
+//? Массивы. (Arrays)
+
+// Цвета радуги. 
+// Как обычно выглядят элементы
+// const color1 = 'red';
+// const color2 = 'orange';
+// const color3 = 'yellow';
+// const color4 = 'green';
+// const color5 = 'blue';
+// const color6 = 'indigo';
+// const color7 = 'violet';
+
+// Массив
+
+// const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// console.log(rainbowColors[3]); // Вызов 4 элемента в консоль. Индекс у элементов начинается с 0.
+
+// Пример использования данных массива
+
+// console.log('The sky is ' + rainbowColors[4]); // Получаем результат в консоле 'Небеса голубые'
+
+// Либо можно просто вывести весь массив
+
+// console.log(rainbowColors);
+
+// Пример замены элемента в массиве
+
+// rainbowColors[5] = 'dark blue'; // В результате 'indigo' был заменён на 'dark blue'. При чем это произошло лишь после повторного вызова массива. 
+// rainbowColors[8] = 'indigo'; // Добавили 'indigo' на 8 индекс. Т.е. на 9 место. Следовательно в консоле будет между 7 и 9 "empty".
+// rainbowColors[rainbowColors.length] = 'indigo'; // Способ добавления в конце массива. В результате 'indigo' был добавлен ещё раз, но уже в конце массива. 
+// console.log(rainbowColors); 
+
+// Пример создания пустого массива
+// const stringNumbers = []; // Можно создавать и пустой массив, который в будущем будет заполнен
+
+// Пример заполнения пустого массива
+// stringNumbers[0] = 'one';
+// stringNumbers[1] = 'two';
+// stringNumbers[3] = 'three';
+
+// new Array
+// const stringNumbers = new Array('one', 'two', 'three'); // Способ создания массива с помощью функции "new Array"
+// console.log(stringNumbers);
+
+
+// Пример создания числового массива
+// const numbers = [34, 5, 32, 67, 33];
+// console.log(numbers);
+
+// в JS можно в массиве использовать разные виды данных
+// const anyItems = [4, true, new Date(), 'something']; // Числовой, логический, дата, строка.
+// console.log(anyItems);
+//!========================================================================================================================================================
