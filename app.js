@@ -880,6 +880,9 @@
 // const bonus1 = printBonus(dept1AverQuarterFirst, dept2AverQuarterFirst);
 // const bonus2 = printBonus(dept1AverQuarterSecond, dept2AverQuarterSecond);
 // printBonus(dept1AverQuarterFirst, dept2AverQuarterFirst); // Вызов функции с результатом за первый квартал.
+
+//========================================================================================================================================================
+
 // Свои попытки "потыкать"
 // printBonus(dept1AverSales2, dept2AverSales2);
 
