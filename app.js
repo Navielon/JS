@@ -1251,6 +1251,43 @@
 // else { // Если BMI у Майка будет больше, чем у Джека, то реализован будет следующий вариант: 
 //    console.log(`У ${objectMikeBlack.name + objectMikeBlack.lastname} индекс BMI (${objectMikeBlack.bmi}) выше, чем у ${objectJackWhite.name + objectJackWhite.lastname} BMI (${objectJackWhite.bmi}) `)
 // };
+
+// Другой способ решения задачи: 
+// const jack = {
+//    firstName: 'Jack',
+//    lastName: 'White',
+//    weight: 79,
+//    height: 1.70,
+//    calcBmi: function () {
+//       this.bmi = this.weight / this.height ** 2;
+//       return this.bmi;
+//    }
+// };
+
+// const mike = {
+//    firstName: 'Mike',
+//    lastName: 'Black',
+//    weight: 79,
+//    height: 1.70,
+//    calcBmi: function () {
+//       this.bmi = this.weight / this.height ** 2;
+//       return this.bmi;
+//    }
+// };
+
+// console.log(jack.calcBmi());
+// console.log(jack.bmi);
+
+// console.log(mike.calcBmi());
+// console.log(mike.bmi);
+
+// if (jack.bmi > mike.bmi) {
+//    console.log(`${jack.firstName} ${jack.lastName} BMI (${jack.bmi}) is higher than ${mike.firstName} ${mike.lastName} (${mike.bmi})!`);
+// } else if (jack.bmi < mike.bmi) {
+//    console.log(`${mike.firstName} ${mike.lastName} BMI (${mike.bmi}) is higher than ${jack.firstName} ${jack.lastName} (${jack.bmi})!`);
+// } else {
+//    console.log(`${mike.firstName} ${mike.lastName} and ${jack.firstName} ${jack.lastName} BMI are equal (${mike.bmi})!`);
+// }
 //!========================================================================================================================================================
 
 
