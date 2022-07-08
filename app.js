@@ -1142,13 +1142,13 @@
    // return 2021 - birthYear;
 // }
 // Сейчас же: 
-ruslanObject = {
-   name: 'Руслан', 
-   lastname: 'Гаврилин', 
-   birthYear: 2000, 
-   job: 'Frontend developer', 
-   familyMembers: ['Катя', 'Руслан'],
-   hasDriverLicense: true,
+// ruslanObject = {
+//    name: 'Руслан', 
+//    lastname: 'Гаврилин', 
+//    birthYear: 2000, 
+//    job: 'Frontend developer', 
+//    familyMembers: ['Катя', 'Руслан'],
+   // hasDriverLicense: true,
    // Обычный вариант, если требуется вводить или изменять значения из вне
    // calcAge: function(birthYear) { // Функция экспрешн внутри объекта. Она является методом объекта. Любая функция которая находится внутри объекта является МЕТОДОМ.
    //    return 2022 - birthYear;
@@ -1160,15 +1160,15 @@ ruslanObject = {
    // }
    // Способ при котором не будет идти большая нагрузка на железо, если необходимо несколько раз обратится к данным внутри объекта, или же использовать метод.
    // Метод ruslanObject.age не будет работать, если до этого не вывести функцию (метод) calcAge
-   calcAge: function () {
+//    calcAge: function () {
       // console.log(this); // Показывает, что выводит переменная THIS
-      this.age = 2022 - this.birthYear; // Создаём новое свойство age
-      return 2022 - this.birthYear; // Можно больше не возвращать, т.к. мы переменной this присваеваем необходимое значение (При вызове функции .age)
-   },
-   info: function(){
-      return `Имя: ${this.name}, Возраст: ${this.calcAge()}, Вид деятельности: ${this.job}, ${this.hasDriverLicense ? 'Права на вождение есть' : 'Прав на вождение нет'}`
-   }
-};
+//       this.age = 2022 - this.birthYear; // Создаём новое свойство age
+//       return 2022 - this.birthYear; // Можно больше не возвращать, т.к. мы переменной this присваеваем необходимое значение (При вызове функции .age)
+//    },
+//    info: function(){
+//       return `Имя: ${this.name}, Возраст: ${this.calcAge()}, Вид деятельности: ${this.job}, ${this.hasDriverLicense ? 'Права на вождение есть' : 'Прав на вождение нет'}`
+//    }
+// };
 
 // Пример вывода функции внутри объекта
 // console.log(ruslanObject.calcAge(2000)); // Способ обращение к методу объекта (Функции внутри объекта) через Dot
@@ -1196,7 +1196,63 @@ ruslanObject = {
 // Challenge
 // Условия: Метод должен возвращать строку, которая будет содержать следующие значения:
 // Имя: Руслан, Возвраст: 22, Вид деятельности: Frontend developer, права на вождение есть.
-console.log(ruslanObject.info());
-console.log(ruslanObject.information);
+// console.log(ruslanObject.info());
+// console.log(ruslanObject.information);
 // Выполнено.
 //!========================================================================================================================================================
+//? Объекты. Задание.
+////  Вычислить индекс массы тела для Джек и Майка
+////  ИМТ = вес / рост ** 2 = вес / (рост*рост)
+////  BMI = weight / height **2 = weight / (height * height)
+////  Необходимо создать два объекта с данными Mike и Jack
+////  Объекты должны содержать следующие данные: 
+////  Имя, фамилия, рост, вес
+////  Необходимо создать метод, который будет вычислить BMI для каждого объекта. Также нужно сохранять BMI в СВОЙСТВЕ ДАННОГО ОБЪЕКТА (т.е. чтобы BMI возвращался в объект из метода)
+////  Нужно вывести в консоль у кого BMI больше, имя и фамилию.
+////  Пример: "Jack White BMI (25.7) выше, чем у Mike Black(22.4)"
+////  Данные: Jack White весит 79 кг, рост  1.7м; Mike Black весит 91 кг, его рост 1.93;
+
+//// Создание объекта Jack White
+// objectJackWhite = {
+//    name: 'Jack',
+//    lastname: ' White',
+//    height: '1.7',
+//    weight: '79',
+//    // Создание метода, который рассчитывает BMI на основе данных объекта и возвращает результат в объект
+//    bmiF: function(){
+//       const BMI = this.weight / this.height ** 2;
+//       return objectJackWhite.bmi = BMI;
+//    }
+// };
+//// console.log(objectJackWhite.bmiF()); // Вызов метода и проверка его работы в консоле
+// objectJackWhite.bmiF() // Вызов метода для его работы.
+//// console.log(objectJackWhite); // Вызов массива и проверка его работы
+
+// // Создание объекта Mike Black
+// objectMikeBlack = {
+//    name: 'Mike',
+//    lastname: 'Black',
+//    height: '1.93',
+//    weight: '91',
+//    // Создание метода, который рассчитывает BMI на основе данных объекта и возвращает результат в объект
+//    bmiF: function(){
+//       const BMI = this.weight / this.height ** 2;
+//       return objectMikeBlack.bmi = BMI;
+//    }
+// };
+// // console.log(objectMikeBlack.bmiF()); // Вызов метода и проверка его работы в консоле
+// objectMikeBlack.bmiF() // Вызов метода для его работы.
+// // console.log(objectMikeBlack); // Вызов массива и проверка его работы
+
+// // Вывод в консоль того, у кого значение BMI больше.
+// if (objectJackWhite.bmi>objectMikeBlack.bmi){ // Если BMI у Джека будет больше, чем у Майка, то будет реализован следующий вариант:
+//    console.log(`У ${objectJackWhite.name + objectJackWhite.lastname} индекс BMI (${objectJackWhite.bmi}) выше, чем у ${objectMikeBlack.name + objectMikeBlack.lastname} BMI (${objectMikeBlack.bmi})`)
+// }
+// else { // Если BMI у Майка будет больше, чем у Джека, то реализован будет следующий вариант: 
+//    console.log(`У ${objectMikeBlack.name + objectMikeBlack.lastname} индекс BMI (${objectMikeBlack.bmi}) выше, чем у ${objectJackWhite.name + objectJackWhite.lastname} BMI (${objectJackWhite.bmi}) `)
+// };
+//!========================================================================================================================================================
+
+
+
+
