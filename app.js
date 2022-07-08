@@ -1403,7 +1403,9 @@
 const user123 = ['Ruslan', 'Gavrilin', 2000, 'Developer', ['Katya', 'Sun'], 'Man'];
 
 // Нужно вывести лишь 5 элементов массива
-for (let i = user123.length - 1; )
+for (let i = user123.length - 1;  i >= 0; i--){
+   
+}
 
 
 
