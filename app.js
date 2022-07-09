@@ -1400,28 +1400,57 @@
 //!========================================================================================================================================================
 //? Интеграция в обратном порядке. Цикл в цикле (Backwards iteration & Loop in loop)
 
-const user123 = ['Ruslan', 'Gavrilin', 2000, 'Developer', ['Katya', 'Sun'], 'Man'];
+// const user123 = ['Ruslan', 'Gavrilin', 2000, 'Developer', ['Katya', 'Sun'], 'Man'];
 
 // Нужно вывести лишь 5 элементов массива
-for (let i = user123.length - 1;  i >= 0; i--){
-   console.log(i, user123[i]);
-};
+// for (let i = user123.length - 1;  i >= 0; i--){
+//    console.log(i, user123[i]);
+// };
 
-console.log('=============================================================')
+// console.log('=============================================================')
 
-for (let exercise = 1; exercise <= 3; exercise++) {
-   console.log(`EXERCISE ${exercise}`);
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//    console.log(`EXERCISE ${exercise}`);
 
-   for (let rep =1; rep <=5; rep++){
-      console.log(`Ex ${exercise} Repetition ${rep}`);
-   };
-   console.log('Out of inner loop');
-};
+//    for (let rep =1; rep <=5; rep++){
+//       console.log(`Ex ${exercise} Repetition ${rep}`);
+//    };
+//    console.log('Out of inner loop');
+// };
 
 // console.log('Out of outer loop');
 //!========================================================================================================================================================
 
+//? Цикл While
+// Цикл for (ДЛЯ)
+// Цикл While (ПОКА)
 
+// Цикл FOR
+ for (let rep = 1; rep <=10; rep++){
+   // console.log(`Push ups repetition ${rep}`);
+ };
+
+
+// Цикл While
+let rep = 1;
+while (rep <= 10) {
+   // console.log(`Push ups repetition ${rep}`);
+   rep++;
+}
+
+// Рандомайзер от 1 до 6.
+let diceNumber = Math.trunc(Math.random() * 6) + 1;
+console.log(`До цикла While - ${diceNumber}`);
+
+// Цикл выводит значения до тех пор, пока результат рандомайзера не станет равен 6
+// При каждом новом значении будет проверяться логическое значение, и если оно равно TRUE то цикл будет продолжаться
+// Удобнее использвать когда мы не знаем итоговое количество элементов.
+while (diceNumber !== 6) {
+   console.log(diceNumber);
+   diceNumber = Math.trunc(Math.random() * 6) + 1;
+   console.log(`В цикле While после случайного создания - ${diceNumber}`);
+}
+//!========================================================================================================================================================
 
 
 
