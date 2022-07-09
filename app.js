@@ -1398,14 +1398,30 @@
 //    console.log(user123[i], typeof user123[i]); 
 // };
 //!========================================================================================================================================================
-//? Интеграция в обратном порядке. Цикл в цикле
+//? Интеграция в обратном порядке. Цикл в цикле (Backwards iteration & Loop in loop)
 
 const user123 = ['Ruslan', 'Gavrilin', 2000, 'Developer', ['Katya', 'Sun'], 'Man'];
 
 // Нужно вывести лишь 5 элементов массива
 for (let i = user123.length - 1;  i >= 0; i--){
-   
-}
+   console.log(i, user123[i]);
+};
+
+console.log('=============================================================')
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+   console.log(`EXERCISE ${exercise}`);
+
+   for (let rep =1; rep <=5; rep++){
+      console.log(`Ex ${exercise} Repetition ${rep}`);
+   };
+   console.log('Out of inner loop');
+};
+
+// console.log('Out of outer loop');
+//!========================================================================================================================================================
+
+
 
 
 
