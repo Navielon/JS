@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 // const myVar = 'sadasdaa';
 
@@ -170,24 +170,25 @@
 
 // Решение
 
-const data1 = [49, 51, 63]; // Массив 1
-const data2 = [31, 29, 43, 57, 52]; // Массив 2
+// const data1 = [49, 51, 63]; // Массив 1
+// const data2 = [31, 29, 43, 57, 52]; // Массив 2
 
 // Функция
-const printHumiditiesForecast = function(a){  // Вместо "a"подставляется массив
+// const printHumiditiesForecast = function(a){  // Вместо "a"подставляется массив
 
 // Переменная, которая будет содержать строку результата
-let info = '';
+// let info = '';
 
 // Цикл, который выполняет следующие действия
 // Подставляет индекс элементов, добавляя к ним процент и ближайшие дни
-for (let i = 0; i < a.length; i++){ // Условия цикла
-   info += `${a[i]}% humidity in ${i+1} days... ` // Цикл
-}
+// for (let i = 0; i < a.length; i++){ // Условия цикла
+   // info =  info + `${a[i]}% humidity in ${i+1} days... ` // Не совсем правильный способ
+   // info += `${a[i]}% humidity in ${i+1} days... ` // Цикл
+// }
 // Вывод в консоль результата ПОСЛЕ цикла
-   console.log(info)
-};
+   // console.log(info)
+// };
 
 // Вызов функции
-printHumiditiesForecast(data1);
+// printHumiditiesForecast(data1);
 //!========================================================================================================================================================
