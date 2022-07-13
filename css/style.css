@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #505050;
+  font-family: "Press Start 2P", sans-serif;
+  /* background-color: #70cc75;  */
+  color: #fff;
+}
+
+.header {
+  border-bottom: 7px solid #fff;
+  position: relative;
+  margin-bottom: 180px;
+}
+.header__container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  align-items: center;
+  position: relative;
+}
+.header__between {
+  background-color: #fff;
+  padding: 6px 14px;
+  font-size: 15px;
+  color: #000;
+}
+.header__between-text {
+  position: absolute;
+  top: 7px;
+  right: 40px;
+}
+.header__text {
+  margin-top: 150px;
+}
+.header__title {
+  margin-bottom: 120px;
+  font-size: 50px;
+}
+.header__question {
+  font-size: 40px;
+  color: #000;
+  position: absolute;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px 80px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.btn {
+  font-family: "Press Start 2P", sans-serif;
+  border: none;
+  padding: 6px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #bdbdbd;
+}
+
+.game__container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+}
+.game-right__number {
+  background: none;
+  border: 4px solid #fff;
+  font-family: inherit;
+  color: #fff;
+  font-size: 40px;
+  padding: 40px 40px;
+  width: 250px;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+.game-right__number:hover, .game-right__number:focus {
+  border: 4px solid #db7e27;
+}
+.game-right__btn {
+  padding: 15px 10px;
+}
+
+.game-left__message {
+  margin-bottom: 20px;
+}
+.game-left__score {
+  margin-bottom: 20px;
+}
+.game-left__highscore {
+  margin-bottom: 108px;
+}
+.game-left__btn {
+  padding: 15px 80px;
+}

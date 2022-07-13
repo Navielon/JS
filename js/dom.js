@@ -17,6 +17,7 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1; // Диапазон ра�
 // console.log(secretNumber);
 
 let score = 20;
+let highscore = 0
 // console.log(score);
 document.querySelector('.again').addEventListener('click', function(){
    // location.reload () // - Перезагрузить страницу
@@ -26,7 +27,7 @@ document.querySelector('.again').addEventListener('click', function(){
    document.querySelector('.question').style.padding = '2rem 8rem';
    document.querySelector('.number-input').value = '';
    secretNumber = (Math.trunc(Math.random() * 20) + 1);
-   // console.log(secretNumber);
+   console.log(secretNumber);
    score = 20;
    document.querySelector('.score').textContent = score;
    document.querySelector('.guess-message').textContent = 'Начните угадывать!';
@@ -47,12 +48,20 @@ else if (guessNumber === secretNumber) {
    document.querySelector('.guess-message').textContent = 'Правильно!';
    document.querySelector('.question').textContent = secretNumber;
    
-   document.querySelector('.highscore').textContent = score;
    document.querySelector('body').style.backgroundColor = '#70cc75';
    document.querySelector('.question').style.fontSize = '40px';
    document.querySelector('.question').style.padding = '3rem 20rem';
+   if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+   }
 } 
 
+// Исправление косяков
+else if (guessNumber !== secretNumber){
+
+
+}
 // Больше
 else if (guessNumber > secretNumber) {
       if (score > 1) {
