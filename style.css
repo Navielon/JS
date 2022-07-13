@@ -1,3 +1,10 @@
-body {
-  background-color: #aaa9a9;
-}
+body{
+   text-align: center;
+  background-color: #c9c9c9;
+
+  }
+  h1 { 
+   font-size: 100px;
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: #1a1a33;
+  }
