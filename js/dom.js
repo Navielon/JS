@@ -156,8 +156,8 @@ const guessNumber = Number(number.value);
          scoreDoc.textContent = score;
       }
       else {
-         message.textContent =
-            'Game Over!';
+         document.querySelector('body').style.backgroundColor = '#000';
+         message.textContent = 'Game Over!';
          scoreDoc.textContent = 0;
       }
    }
