@@ -28,18 +28,37 @@ body {
   justify-content: space-between;
   padding-top: 35px;
   align-items: center;
-  position: relative;
+}
+@media (max-width: 530px) {
+  .header__menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .header__between {
   background-color: #fff;
   padding: 6px 14px;
   font-size: 15px;
   color: #000;
+  position: relative;
 }
 .header__between-text {
   position: absolute;
-  top: 7px;
-  right: 40px;
+  top: -25px;
+  right: 50px;
+  color: #fff;
+}
+@media (max-width: 530px) {
+  .header__between-text {
+    top: -25px;
+    right: 50px;
+  }
+}
+@media (max-width: 530px) {
+  .header__between {
+    margin-top: 50px;
+  }
 }
 .header__text {
   margin-top: 150px;
@@ -47,6 +66,11 @@ body {
 .header__title {
   margin-bottom: 120px;
   font-size: 50px;
+}
+@media (max-width: 340px) {
+  .header__title {
+    font-size: 45px;
+  }
 }
 .header__question {
   font-size: 40px;
@@ -73,12 +97,28 @@ body {
   background-color: #bdbdbd;
 }
 
+@media (max-width: 530px) {
+  .reset {
+    padding: 15px 16px;
+  }
+}
+
+.game {
+  margin-bottom: 100px;
+}
 .game__container {
   max-width: 1210px;
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 530px) {
+  .game__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .game-right {
@@ -103,10 +143,38 @@ body {
 .game-right__number:hover, .game-right__number:focus {
   border: 4px solid #db7e27;
 }
+@media (max-width: 850px) {
+  .game-right__number {
+    font-size: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .game-right__number {
+    width: 200px;
+    font-size: 30px;
+  }
+}
 .game-right__btn {
   padding: 15px 10px;
 }
 
+@media (max-width: 850px) {
+  .game-left {
+    font-size: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .game-left {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 530px) {
+  .game-left {
+    margin-top: 50px;
+    font-size: 15px;
+  }
+}
 .game-left__message {
   margin-bottom: 20px;
 }
@@ -116,6 +184,26 @@ body {
 .game-left__highscore {
   margin-bottom: 108px;
 }
+@media (max-width: 850px) {
+  .game-left__highscore {
+    margin-bottom: 85px;
+  }
+}
+@media (max-width: 650px) {
+  .game-left__highscore {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 530px) {
+  .game-left__highscore {
+    margin-bottom: 50px;
+  }
+}
 .game-left__btn {
   padding: 15px 80px;
+}
+@media (max-width: 650px) {
+  .game-left__btn {
+    padding: 15px 60px;
+  }
 }
