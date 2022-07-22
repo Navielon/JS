@@ -878,8 +878,11 @@
 //    }
 // }
 // const bonus1 = printBonus(dept1AverQuarterFirst, dept2AverQuarterFirst);
+// console.log(bonus1)
 // const bonus2 = printBonus(dept1AverQuarterSecond, dept2AverQuarterSecond);
+// console.log(bonus2)
 // printBonus(dept1AverQuarterFirst, dept2AverQuarterFirst); // Вызов функции с результатом за первый квартал.
+// printBonus(dept1AverQuarterSecond, dept2AverQuarterSecond; // Вызов функции с результатом за первый квартал.
 
 //========================================================================================================================================================
 
