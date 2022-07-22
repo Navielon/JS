@@ -138,3 +138,66 @@
 // const f = user999.getAg;
 // f(); // Происходит вызов обычной функции. В результате получаем undefiend, т.к. это НЕ МЕТОД.
 //!========================================================================================================================================================
+// 100. Regular vs Arrow Functions
+// const user999 = {
+//    firstName: 'Ruslan',
+//    birthYear: 2000,
+//    getAge: function() {
+//       console.log(this); // Ключевое слово this вызвано внутри МЕТОДА.
+//       console.log(2022 - this.birthYear); // Вызываем объект, в котором написан данный метод
+//    },
+// // НЕ ИСПОЛЬЗУЙ СТРЕЛОЧНУЮ ФУНКЦИЮ В ОБЪЕКТЕ!
+//    sayGreeting: () => {
+//       console.log(this);
+//       console.log(`Hello, I'm ${this.firstName}`);
+//    },
+// };
+
+// user999.sayGreeting(); // undefined
+// console.log(this.firstName); // undefined
+
+// const user999 = {
+//    firstName: 'Ruslan',
+//    birthYear: 2000,
+//    getAge: function() {
+      // console.log(this); // Ключевое слово this вызвано внутри МЕТОДА.
+      // console.log(2022 - this.birthYear); // Вызываем объект, в котором написан данный метод
+      // const self = this;
+      // const isAdult = function() {
+      //    // console.log((2022 - this.birthYear) >= 18);  ERROR!!!
+      //    console.log((2022 - self.birthYear) >= 18);
+      // };
+      // new approach after ES6 (НОВЫЙ СПОСОБ ES6)
+      // const isAdult = () =>{
+      //    console.log(this);
+      //    console.log(2022 - this.birthYear >= 18);
+   //    }
+   //    isAdult();
+   // },
+// НЕ ИСПОЛЬЗУЙ СТРЕЛОЧНУЮ ФУНКЦИЮ В ОБЪЕКТЕ!
+//    sayGreeting: () => {
+//       console.log(this);
+//       console.log(`Hello, I'm ${this.firstName}`);
+//    },
+// };
+
+// user999.getAge()
+
+
+// Arguments keyword
+
+// const exprSum = function (a, b) {
+//    console.log(arguments);
+//    return a + b;
+// };
+
+// exprSum(1, 2);
+// exprSum(1, 2, 3, 5, 643);
+
+// Error
+// var arrSum = (a, b) => {
+//    console.log(arguments);
+//    return a + b;
+// };
+// arrSum(7, 11, 23); 
+//!========================================================================================================================================================
