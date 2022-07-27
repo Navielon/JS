@@ -100,7 +100,7 @@
 //!========================================================================================================================================================
 
 
-// this Практика
+//TODO this Практика
 
 // console.log(this); // window
 
@@ -138,7 +138,7 @@
 // const f = user999.getAg;
 // f(); // Происходит вызов обычной функции. В результате получаем undefiend, т.к. это НЕ МЕТОД.
 //!========================================================================================================================================================
-// 100. Regular vs Arrow Functions
+//TODO Regular vs Arrow Functions
 // const user999 = {
 //    firstName: 'Ruslan',
 //    birthYear: 2000,
@@ -202,7 +202,7 @@
 // arrSum(7, 11, 23); 
 //!========================================================================================================================================================
 
-// Примитивные VS ссылочные типы
+//TODO Примитивные VS ссылочные типы
 
 // let a = 1;
 // let b = a;
@@ -220,4 +220,41 @@
 
 // console.log('Object: ', x);
 // console.log('Object: ', y);
+//!========================================================================================================================================================
+
+// Primitives
+// let lastName = 'Brown';
+// let oldLastName = lastName;
+// lastName = 'White';
+// console.log(lastName, oldLastName);
+
+// Objects
+// const jane = {
+//    firstName: 'Jane',
+//    lastName: 'Brown',
+//    age: 21,
+// };
+
+// const marriedJane = jane; // Мы копируем ссылку на объект! 
+// marriedJane.lastName = 'White';
+// console.log('Jane: ', jane);
+// console.log('Married Jane: ', marriedJane);
+// marriedJane = {}; // Нельзя. т.к. это Const
+
+// Objects copying
+
+// const sara = {
+//    firstName: 'Sara',
+//    lastName: 'Brown',
+//    age: 21,
+//    familyMembers: ['Jack', 'Bob', 'Greta'],
+// };
+
+// const saraCopy = Object.assign({}, sara); // КОПИРУЕТ ОБЪЕКТ И СОЗДАЁТ НОВЫЙ! НО РАБОТАЕТ ТОЛЬКО НА ПЕРВОМ УРОВНЕ
+// console.log(saraCopy);
+// saraCopy.lastName = 'White';
+// saraCopy.familyMembers.push('Bill', 'Marta');
+
+// console.log('Sara: ', sara);
+// console.log('Married Sara: ', saraCopy);
 //!========================================================================================================================================================
