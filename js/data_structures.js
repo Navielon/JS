@@ -1,18 +1,18 @@
 'use strict';
 
 // Деструктуризация массивов
-const japaneseRestaurant = {
-   name: 'Banzai',
-   location: '108 Markham Woods Rd, Longwood, USA',
-   categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
-   appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
-   mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+// const japaneseRestaurant = {
+//    name: 'Banzai',
+//    location: '108 Markham Woods Rd, Longwood, USA',
+//    categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+//    appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+//    mainMenu: ['Sushi', 'Ramen', 'Tempura'],
  
-   orderFood: function(appetizersIndex, mainMenuIndex) {
-      return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
-   } 
+//    orderFood: function(appetizersIndex, mainMenuIndex) {
+//       return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+//    } 
 
-};
+// };
  
 
 //  const arr = [3, 5, 7];
@@ -64,4 +64,48 @@ const japaneseRestaurant = {
 // const unknownArr = [3, 5];
 // const [a = 0, b = 0 , c = 0] = unknownArr; // Установка дефолтный значений на 0 для всех вызываемых элементов
 // console.log(a, b, c);
+//========================================================================================================================================================
+
+//TODO Деструктуризация объектов (Destructuring objects)
+
+const japaneseRestaurant = {
+   restName: 'Banzai',
+   location: '108 Markham Woods Rd, Longwood, USA',
+   categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+   appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+   mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+   workingHours: {
+      wed: {
+         open: 10, 
+         close: 23,
+      },
+      frit: {
+         open: 10, 
+         close: 23,
+      },
+      sun: {
+         open: 12, 
+         close: 23,
+      }
+   },
+   orderFood: function(appetizersIndex, mainMenuIndex) {
+      return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+   } 
+};
+ 
+const {workingHours: hours, restName, categories} = japaneseRestaurant;
+console.log(hours, restName, categories);
+
+// Default value (Дефолтные значения)
+const { menu = [], appetizers: starterMenu = []} = japaneseRestaurant;
+console.log(menu, starterMenu);  
+
+// Mutating variables (Мутации)
+
+let x = 3;
+let y = 5;
+const obj = {x: 11, y: 22, z: 33};
+
+({x, y} = obj);
+console.log(x, y);
 //========================================================================================================================================================
