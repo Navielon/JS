@@ -32,24 +32,24 @@ const japaneseRestaurant = {
 
 // Обмен значениями (swaping variables)
 // Старый способ
-let [main, , secondary] = japaneseRestaurant.categories;
-console.log(main, secondary);
-const temp = main;
-main = secondary;
-secondary = temp;
-console.log(main, secondary);
+// let [main, , secondary] = japaneseRestaurant.categories;
+// console.log(main, secondary);
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
 
 // Новый способ
-[secondary, main] = [main, secondary];
-console.log(main, secondary);
+// [secondary, main] = [main, secondary];
+// console.log(main, secondary);
 
 // Возвращаем два значения для функции
-const [appetizer, mainFood] = japaneseRestaurant.orderFood(2, 1);
-console.log(appetizer, mainFood);
+// const [appetizer, mainFood] = japaneseRestaurant.orderFood(2, 1);
+// console.log(appetizer, mainFood);
 
 
 //========================================================================================================================================================
-const nestedArr = [1, 2, [7, 9]];
+// const nestedArr = [1, 2, [7, 9]];
 
 // const [a, , b] = nestedArr;
 // console.log(a, b);
@@ -60,3 +60,8 @@ const nestedArr = [1, 2, [7, 9]];
 
 //========================================================================================================================================================
 
+// Дефолтные значения (default values)
+// const unknownArr = [3, 5];
+// const [a = 0, b = 0 , c = 0] = unknownArr; // Установка дефолтный значений на 0 для всех вызываемых элементов
+// console.log(a, b, c);
+//========================================================================================================================================================
