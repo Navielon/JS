@@ -257,11 +257,11 @@ const japaneseRestaurant = {
 
 // Объекты и Spread
 
-const newJapaneseRestaurant = {foundationDate: 2003, ...japaneseRestaurant, owner: 'Suzuki'};
-console.log(newJapaneseRestaurant);
+// const newJapaneseRestaurant = {foundationDate: 2003, ...japaneseRestaurant, owner: 'Suzuki'};
+// console.log(newJapaneseRestaurant);
 
-const japaneseRestaurantCopy = {...japaneseRestaurant};
-japaneseRestaurantCopy.restName = 'Suzuki Sushi!';
-console.log(japaneseRestaurantCopy.restName);
-console.log(japaneseRestaurant.restName);
+// const japaneseRestaurantCopy = {...japaneseRestaurant};
+// japaneseRestaurantCopy.restName = 'Suzuki Sushi!';
+// console.log(japaneseRestaurantCopy.restName);
+// console.log(japaneseRestaurant.restName);
 //========================================================================================================================================================
