@@ -188,6 +188,10 @@ const japaneseRestaurant = {
          open: 10, 
          close: 23,
       },
+      sat:{
+         open: 0,
+         close: 24,
+      },
       sun: {
          open: 12, 
          close: 23,
@@ -206,6 +210,10 @@ const japaneseRestaurant = {
    
    orderSushi: function(ing1, ing2, ing3){
       console.log('You have ordered sushi with ${ing1}, ${ing2},${ing3}');
+   },
+   orderRamen: function(noodle, ...otherIngs) {
+      console.log(noodle);
+      console.log(otherIngs);
    }
 };
 
@@ -265,3 +273,43 @@ const japaneseRestaurant = {
 // console.log(japaneseRestaurantCopy.restName);
 // console.log(japaneseRestaurant.restName);
 //========================================================================================================================================================
+
+// Паттерн Rest и Параметры Rest
+
+// 1. Паттерн Rest в деструтуризации
+// Создание массива на основе старого массива
+
+// const arr = [1, 2, ...[3,4]]; // Оператор Spread, т.к. три точки СПРАВА от знака равно! 
+
+// const [a, b, ...items] = [1, 2, 3, 4]; // Оператор Rest, т.к. три точки СЛЕВА от знака равно! 
+
+// const [seaweed, , edaname, ...otherFood] = [...japaneseRestaurant.appetizers, ...japaneseRestaurant.mainMenu]
+// console.log(seaweed, edaname, otherFood);
+
+// Rest pattern with objects
+
+// const {sun, sat, ...weekdays} = japaneseRestaurant.workingHours; 
+// console.log(sun, sat, weekdays);
+
+// 2. Паттер Rest в функциях
+
+// Sum становится массивом благодаря паттерну rest
+// const sum = function(...nums) {
+//    let sum = 0;
+//    for( let i = 0; i < nums.length; i++){
+//       sum += nums[i];
+//    }
+//    console.log(sum);
+// }
+
+// sum(2,5);
+// sum(1, 4, 7, 3);
+
+
+// const numbers = [3, 44, 2];
+
+// sum(...numbers); // Сперва происходит расповка массива Numbers, который после передаётся в функцию sum, которая складывает все элементы массива через цикл
+
+// japaneseRestaurant.orderRamen('Colored Noodle', 'Meat', 'Chicken', 'Onion');
+//========================================================================================================================================================
+
