@@ -170,3 +170,74 @@
 //    adress: 'г. Минск, ул. Новая, д. 17, кв 28'
 // })
 //========================================================================================================================================================
+
+// Оператор Spread
+
+const japaneseRestaurant = {
+   restName: 'Banzai',
+   location: '108 Markham Woods Rd, Longwood, USA',
+   categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+   appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+   mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+   workingHours: {
+      wed: {
+         open: 10, 
+         close: 23,
+      },
+      frit: {
+         open: 10, 
+         close: 23,
+      },
+      sun: {
+         open: 12, 
+         close: 23,
+      }
+   },
+   orderFood: function(appetizersIndex, mainMenuIndex) {
+      return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+   },
+   foodDelivery: function(
+      {mainMenuIndex = 0,
+      appetizersIndex = 0,
+      adress, deliveryTime = '18:00',
+      }) {
+      console.log(`Ваш заказ уже в пути к вам! ${this.appetizers[appetizersIndex]} и ${this.mainMenu[mainMenuIndex]} по адресу "${adress}" к ${deliveryTime}`);
+   }
+};
+
+// Добавление вручную, старый подход.
+const arr = [1, 3, 5];
+const newArr = [7, 9, arr[0], arr[1], arr[2]]
+console.log(newArr);
+
+// Новый подход при помощи оператора Spread (...)
+
+const newArrSpread = [7, 9, ...arr];
+console.log(newArrSpread);
+console.log(...newArrSpread); // Вывод с помощью оператора Spread
+
+const newMenu = [...japaneseRestaurant.mainMenu, 'Miso Salmon']; // Создание нового массива, не изменяя старый! 
+console.log(newMenu);
+
+// Копирование массива
+
+// Создание поверхностной копии (Array coping)
+const categoriesCopy = [...japaneseRestaurant.categories];
+console.log(categoriesCopy);
+
+// Слияние массивов (Merge arrays)
+const menu = [...japaneseRestaurant.appetizers, ...japaneseRestaurant.mainMenu];
+console.log(menu);
+
+// Iterable - arrays, strings, maps, sets, OBJECTS AREN`T ITERABLE!!! 
+
+// Spread operator with strings
+const greeting = 'Hey';
+const greetingLetters = [...greeting, '!'];
+console.log(greetingLetters);
+console.log(...greeting);
+// Нельзя выводить в шаблонные строки
+// console.log(`${...greeting}`); Нельзя так делать!!!!
+
+
+// Практический пример использования оператора Spread
