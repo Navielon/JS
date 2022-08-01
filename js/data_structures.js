@@ -68,44 +68,105 @@
 
 //TODO Деструктуризация объектов (Destructuring objects)
 
-const japaneseRestaurant = {
-   restName: 'Banzai',
-   location: '108 Markham Woods Rd, Longwood, USA',
-   categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
-   appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
-   mainMenu: ['Sushi', 'Ramen', 'Tempura'],
-   workingHours: {
-      wed: {
-         open: 10, 
-         close: 23,
-      },
-      frit: {
-         open: 10, 
-         close: 23,
-      },
-      sun: {
-         open: 12, 
-         close: 23,
-      }
-   },
-   orderFood: function(appetizersIndex, mainMenuIndex) {
-      return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
-   } 
-};
+// const japaneseRestaurant = {
+//    restName: 'Banzai',
+//    location: '108 Markham Woods Rd, Longwood, USA',
+//    categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+//    appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+//    mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+//    workingHours: {
+//       wed: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       frit: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       sun: {
+//          open: 12, 
+//          close: 23,
+//       }
+//    },
+//    orderFood: function(appetizersIndex, mainMenuIndex) {
+//       return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+//    },
+//    foodDelivery: function(obj) {
+//       console.log(obj);
+//    }
+// };
  
-const {workingHours: hours, restName, categories} = japaneseRestaurant;
-console.log(hours, restName, categories);
+// japaneseRestaurant.foodDelivery({
+//    deliveryTime: '12',
+//    adress: '18, Markham Woods Rd',
+//    mainMenuIndex: 1,
+//    appetizersIndex: 0,
+// })
+// const {workingHours: hours, restName, categories} = japaneseRestaurant;
+// console.log(hours, restName, categories);
 
-// Default value (Дефолтные значения)
-const { menu = [], appetizers: starterMenu = []} = japaneseRestaurant;
-console.log(menu, starterMenu);  
+// // Default value (Дефолтные значения)
+// const { menu = [], appetizers: starterMenu = []} = japaneseRestaurant;
+// console.log(menu, starterMenu);  
 
-// Mutating variables (Мутации)
+// // Mutating variables (Мутации)
 
-let x = 3;
-let y = 5;
-const obj = {x: 11, y: 22, z: 33};
+// let x = 3;
+// let y = 5;
+// const obj = {x: 11, y: 22, z: 33};
 
-({x, y} = obj);
-console.log(x, y);
+// ({x, y} = obj);
+// console.log(x, y);
+//========================================================================================================================================================
+
+// Nested objects
+// const {sun: {open: openHours, close: closeHours}} = hours;
+// console.log(openHours, closeHours);
+
+// Практическое преминение деструктуризация 
+
+
+// const japaneseRestaurant = {
+//    restName: 'Banzai',
+//    location: '108 Markham Woods Rd, Longwood, USA',
+//    categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+//    appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+//    mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+//    workingHours: {
+//       wed: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       frit: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       sun: {
+//          open: 12, 
+//          close: 23,
+//       }
+//    },
+//    orderFood: function(appetizersIndex, mainMenuIndex) {
+//       return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+//    },
+//    foodDelivery: function(
+//       {mainMenuIndex = 0,
+//       appetizersIndex = 0,
+//       adress, deliveryTime = '18:00',
+//       }) {
+//       console.log(`Ваш заказ уже в пути к вам! ${this.appetizers[appetizersIndex]} и ${this.mainMenu[mainMenuIndex]} по адресу "${adress}" к ${deliveryTime}`);
+//    }
+// };
+ 
+// Деструктурирование данных внутри существующего объекта
+// japaneseRestaurant.foodDelivery({
+//    deliveryTime: '12:00',
+//    adress: 'г. Минск, ул. Новая, д. 17, кв 28',
+//    mainMenuIndex: 1,
+//    appetizersIndex: 0,
+// });
+
+// japaneseRestaurant.foodDelivery({
+//    adress: 'г. Минск, ул. Новая, д. 17, кв 28'
+// })
 //========================================================================================================================================================
