@@ -173,49 +173,49 @@
 
 // Оператор Spread
 
-const japaneseRestaurant = {
-   restName: 'Banzai',
-   location: '108 Markham Woods Rd, Longwood, USA',
-   categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
-   appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
-   mainMenu: ['Sushi', 'Ramen', 'Tempura'],
-   workingHours: {
-      wed: {
-         open: 10, 
-         close: 23,
-      },
-      frit: {
-         open: 10, 
-         close: 23,
-      },
-      sat:{
-         open: 0,
-         close: 24,
-      },
-      sun: {
-         open: 12, 
-         close: 23,
-      }
-   },
-   orderFood: function(appetizersIndex, mainMenuIndex) {
-      return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
-   },
-   foodDelivery: function(
-      {mainMenuIndex = 0,
-      appetizersIndex = 0,
-      adress, deliveryTime = '18:00',
-      }) {
-      console.log(`Ваш заказ уже в пути к вам! ${this.appetizers[appetizersIndex]} и ${this.mainMenu[mainMenuIndex]} по адресу "${adress}" к ${deliveryTime}`);
-   },
+// const japaneseRestaurant = {
+//    restName: 'Banzai',
+//    location: '108 Markham Woods Rd, Longwood, USA',
+//    categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+//    appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+//    mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+//    workingHours: {
+//       wed: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       frit: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       sat:{
+//          open: 0,
+//          close: 24,
+//       },
+//       sun: {
+//          open: 12, 
+//          close: 23,
+//       }
+//    },
+//    orderFood: function(appetizersIndex, mainMenuIndex) {
+//       return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+//    },
+//    foodDelivery: function(
+//       {mainMenuIndex = 0,
+//       appetizersIndex = 0,
+//       adress, deliveryTime = '18:00',
+//       }) {
+//       console.log(`Ваш заказ уже в пути к вам! ${this.appetizers[appetizersIndex]} и ${this.mainMenu[mainMenuIndex]} по адресу "${adress}" к ${deliveryTime}`);
+//    },
    
-   orderSushi: function(ing1, ing2, ing3){
-      console.log('You have ordered sushi with ${ing1}, ${ing2},${ing3}');
-   },
-   orderRamen: function(noodle, ...otherIngs) {
-      console.log(noodle);
-      console.log(otherIngs);
-   }
-};
+//    orderSushi: function(ing1, ing2, ing3){
+//       console.log('You have ordered sushi with ${ing1}, ${ing2},${ing3}');
+//    },
+//    orderRamen: function(noodle, ...otherIngs) {
+//       console.log(noodle);
+//       console.log(otherIngs);
+//    }
+// };
 
 // Добавление вручную, старый подход.
 // const arr = [1, 3, 5];
@@ -274,7 +274,7 @@ const japaneseRestaurant = {
 // console.log(japaneseRestaurant.restName);
 //========================================================================================================================================================
 
-// Паттерн Rest и Параметры Rest
+// Паттерн Rest и Параметры Rest (...)
 
 // 1. Паттерн Rest в деструтуризации
 // Создание массива на основе старого массива
@@ -313,3 +313,87 @@ const japaneseRestaurant = {
 // japaneseRestaurant.orderRamen('Colored Noodle', 'Meat', 'Chicken', 'Onion');
 //========================================================================================================================================================
 
+// const japaneseRestaurant = {
+//    restName: 'Banzai',
+//    location: '108 Markham Woods Rd, Longwood, USA',
+//    categories: ['Japanese', 'Sushi', 'Vegetarian', 'Organic'],
+//    appetizers: ['Seaweed salad', 'Tempura shrimp', 'Edamame', 'Sushi rice'],
+//    mainMenu: ['Sushi', 'Ramen', 'Tempura'],
+//    workingHours: {
+//       wed: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       frit: {
+//          open: 10, 
+//          close: 23,
+//       },
+//       sat:{
+//          open: 0,
+//          close: 24,
+//       },
+//       sun: {
+//          open: 12, 
+//          close: 23,
+//       }
+//    },
+//    orderFood: function(appetizersIndex, mainMenuIndex) {
+//       return [this.appetizers[appetizersIndex], this.mainMenu[mainMenuIndex]];
+//    },
+//    foodDelivery: function(
+//       {mainMenuIndex = 0,
+//       appetizersIndex = 0,
+//       adress, deliveryTime = '18:00',
+//       }) {
+//       console.log(`Ваш заказ уже в пути к вам! ${this.appetizers[appetizersIndex]} и ${this.mainMenu[mainMenuIndex]} по адресу "${adress}" к ${deliveryTime}`);
+//    },
+   
+//    orderSushi: function(ing1, ing2, ing3){
+//       console.log('You have ordered sushi with ${ing1}, ${ing2},${ing3}');
+//    },
+//    orderRamen: function(noodle, ...otherIngs) {
+//       console.log(noodle);
+//       console.log(otherIngs);
+//    }
+// };
+
+//!TODO Про операторы
+//!Оператор ИЛИ / OR (||)
+// Логические операторы могут использовать любые типы данных
+// Могут возвращать любые типы данных
+// Вычислять логические операции по сокращённой схеме
+
+// console.log(5 || 'Hello!'); // По короткой или сокращённой схеме.
+// Если первое значение равняется Truthful (Правдивое) значение, то в этом случае результат будет возврщаением истинного значение первой переменной! 
+// Т.е. JS не идет дальше, если видит, что значение = Trutful
+
+// console.log('' || 'Hello!'); // Первое значение = False, поэтому JS идет дальше, и возвращает второй результат в данном случае, но результат не являеется Boolean!!
+// console.log('true' || 0); // Первое значение Trutful, следовательно оно и возвращается, т.к. JS не идёт дальше
+// console.log(undefined || null); // Undefined = False, JS идёт дальше и возвращает второе значение, хоть оно и является False
+
+// console.log(undefined || '' || 0 || 'Hey!' || 23 || null); // Результатом будет 'Hey!' Т.к. оно первое правдивое в данной цепочки, и JS не идет дальше.
+
+// Более практический пример
+
+// Хотим узнать, есть ли свойство проверяющие наличие гостей
+// japaneseRestaurant.guestsNumber = 10;
+// const guests = japaneseRestaurant.guestsNumber ? japaneseRestaurant.guestsNumber : 5;
+// const guests1 = japaneseRestaurant.guestsNumber || 5;
+// console.log(guests);
+// console.log(guests1);
+
+//! Оператор И / AND (&)
+
+// console.log(0 && 'Hello!'); // Результат будет 0; Когда встречается первое False значение, JS останавливается и возвращает его. 
+// Т.к. логический оператор && почти всегда возвращает False
+// console.log(1 && 'Hello!'); // В результате будет 'Hello'!
+// console.log('hey' && 34 && '' && 44 && null); // В результате будет ' ';
+
+
+
+// if (japaneseRestaurant.orderRamen) {
+//    japaneseRestaurant.orderRamen('Something');
+// };
+
+// japaneseRestaurant.orderRamen && japaneseRestaurant.orderRamen('Something'); 
+//========================================================================================================================================================
