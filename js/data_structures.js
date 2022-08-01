@@ -202,42 +202,66 @@ const japaneseRestaurant = {
       adress, deliveryTime = '18:00',
       }) {
       console.log(`Ваш заказ уже в пути к вам! ${this.appetizers[appetizersIndex]} и ${this.mainMenu[mainMenuIndex]} по адресу "${adress}" к ${deliveryTime}`);
+   },
+   
+   orderSushi: function(ing1, ing2, ing3){
+      console.log('You have ordered sushi with ${ing1}, ${ing2},${ing3}');
    }
 };
 
 // Добавление вручную, старый подход.
-const arr = [1, 3, 5];
-const newArr = [7, 9, arr[0], arr[1], arr[2]]
-console.log(newArr);
+// const arr = [1, 3, 5];
+// const newArr = [7, 9, arr[0], arr[1], arr[2]]
+// console.log(newArr);
 
 // Новый подход при помощи оператора Spread (...)
 
-const newArrSpread = [7, 9, ...arr];
-console.log(newArrSpread);
-console.log(...newArrSpread); // Вывод с помощью оператора Spread
+// const newArrSpread = [7, 9, ...arr];
+// console.log(newArrSpread);
+// console.log(...newArrSpread); // Вывод с помощью оператора Spread
 
-const newMenu = [...japaneseRestaurant.mainMenu, 'Miso Salmon']; // Создание нового массива, не изменяя старый! 
-console.log(newMenu);
+// const newMenu = [...japaneseRestaurant.mainMenu, 'Miso Salmon']; // Создание нового массива, не изменяя старый! 
+// console.log(newMenu);
 
 // Копирование массива
 
 // Создание поверхностной копии (Array coping)
-const categoriesCopy = [...japaneseRestaurant.categories];
-console.log(categoriesCopy);
+// const categoriesCopy = [...japaneseRestaurant.categories];
+// console.log(categoriesCopy);
 
 // Слияние массивов (Merge arrays)
-const menu = [...japaneseRestaurant.appetizers, ...japaneseRestaurant.mainMenu];
-console.log(menu);
+// const menu = [...japaneseRestaurant.appetizers, ...japaneseRestaurant.mainMenu];
+// console.log(menu);
 
 // Iterable - arrays, strings, maps, sets, OBJECTS AREN`T ITERABLE!!! 
 
 // Spread operator with strings
-const greeting = 'Hey';
-const greetingLetters = [...greeting, '!'];
-console.log(greetingLetters);
-console.log(...greeting);
+// const greeting = 'Hey';
+// const greetingLetters = [...greeting, '!'];
+// console.log(greetingLetters);
+// console.log(...greeting);
 // Нельзя выводить в шаблонные строки
 // console.log(`${...greeting}`); Нельзя так делать!!!!
 
 
 // Практический пример использования оператора Spread
+
+// const ingridients = [prompt(`Ingridient 1 for your sushi?`), prompt(`Ingridient 2 for your sushi?`), prompt(`Ingridient 1 for your sushi?`)];
+// console.log(ingridients);
+
+// Старый способ
+// japaneseRestaurant.orderSushi(ingridients[0], ingridients[1], ingridients[2]);
+
+// Оператор Spread
+// japaneseRestaurant.orderSushi(...ingridients);
+
+// Объекты и Spread
+
+const newJapaneseRestaurant = {foundationDate: 2003, ...japaneseRestaurant, owner: 'Suzuki'};
+console.log(newJapaneseRestaurant);
+
+const japaneseRestaurantCopy = {...japaneseRestaurant};
+japaneseRestaurantCopy.restName = 'Suzuki Sushi!';
+console.log(japaneseRestaurantCopy.restName);
+console.log(japaneseRestaurant.restName);
+//========================================================================================================================================================
